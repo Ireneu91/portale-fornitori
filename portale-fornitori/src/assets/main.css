@@ -1,24 +1,28 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&display=swap');
+     /* font-family: "Baloo Paaji 2", sans-serif; */
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
   font-weight: normal;
+  background-image: url('@/assets/sfondo.webp');
+  background-size: cover;
+  background-repeat: none;
+  overflow: hidden;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+h1, h2 {
+  font-family: "Baloo Paaji 2", sans-serif;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+h1 {
+  font-size: 1.5rem;
+  text-transform:uppercase;
+  font-weight: 600;
+}
+
+h2 {
 }
 
 @media (min-width: 1024px) {
@@ -27,9 +31,4 @@ a,
     place-items: center;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
 }
