@@ -5,7 +5,10 @@ Ciao Paolo, scrivo qui qualche appunto sul progetto.
 
 ### Concept grafico
 
-Per quanto riguarda il design nel suo complesso, non avendo riferimenti su palette/logo/font, mi sono focalizzata sull'unica info a mia disposizione: si parla di **fornitori di un'industria metallurgica**. Ho quindi cercato una **texture di sfondo** che ricordasse un **metallo** mantenendo un **contrasto tra toni scuri e caldi** (in particolare una tonalità **arancione**). Ho pensato, insomma, al colore delle **scintille** prodotte in questo tipo di lavorazione.
+Per quanto riguarda il design nel suo complesso, non avendo riferimenti su palette/logo/font, mi sono focalizzata sull'unica info a mia disposizione: si parla di **fornitori di un'industria metallurgica**.
+
+Ho quindi cercato una **texture di sfondo** che ricordasse un **metallo** mantenendo un **contrasto tra toni scuri e caldi** (in particolare una tonalità **arancione**). Ho pensato, insomma, al colore delle **scintille** prodotte in questo tipo di lavorazione.
+
 In particolare sono ricordate dal bordino del form di autenticazione, dei questionari e del form certificazioni.
 Inizialmente avevo pensato anche di aggiungerla alla **navbar** e ai box del cruscotto ma, visti i diversi colori ed elementi presenti, disorientavano un po' l'utente secondo me, e ho optato solo per lo **sfondo in opacità con blur**, che conferisce uno **stile moderno**.
 
@@ -18,7 +21,7 @@ Abbiamo quindi le seguenti **pagine**:
    Contiene una lista dei `questionari` con nome e  `stato di completamento` (di un colore diverso se *da iniziare*, *in corso* o *inviato*). Con l'hover lo sfondo diventa arancio e lo stato bianco, inoltre per rendere ancor più l'idea di "cliccabile" ho fatto in modo che apparisse una freccetta a sinistra del nome, cui ho aggiunto del margin-left.
 
    - **box certificazione:**
-   Contiene in alto gli `alert` *scaduto/in scadenza* (rosso e giallo scuri con bordi leggermente più saturi) e subito sotto l'elenco delle `certificazioni` da caricare, con icone a sinistra e con apposito `bottone` a destra. Per le certificazioni già caricate potremmo pensare di mantenere fissi i colori che adesso appartengono solo all'hover oppure si potrebbe cambiare colore e testo del bottone.
+   Contiene in alto la fascia *carica certificazione* con relativa icona e bottone `carica documento`. Subito sotto, gli `alert` *scaduto/in scadenza* (rosso e giallo scuri con bordi leggermente più saturi) seguiti dall'elenco delle `certificazioni` caricate con bordo e sfondo in trasparenza, icone a sinistra e bottone `modifica` a destra.
 
 * **Questionario:**
   Lo stile riprende quello del form iniziale, con l'aggiunta di un riquadro con sfondo più scuro per ogni gruppo domanda/risposte (secondo me questa divisione rende il form meno pesante, un po' tipo quelli di google form).
