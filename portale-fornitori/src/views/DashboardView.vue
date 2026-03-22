@@ -34,35 +34,41 @@
                 </RouterLink>
             </div>
             <div class="box">
-                <div class="alert_scaduta">
-                    <p>Certificazione 1 scaduta!</p>
-                </div>
-                <div class="alert_in_scadenza">
-                    <p>Certificazione 2 in scadenza</p>
-                </div>
-                
-                <RouterLink to="/certificazione/11">
-                    <div class="certificazione">
-                        <p><img src="../assets/images/certificate.png"/>Certificazione 1</p>
+                <RouterLink to="/certificazione/">
+                    <div class="upload">
+                        <p><img src="../assets/images/upload.png"/>Carica una nuova certificazione</p>
                         <button>Carica documento</button>
                     </div>
                 </RouterLink>
-                <RouterLink to="/certificazione/12">
+                <div class="alert_scaduta">
+                    <p>Certificazione Pippo scaduta!</p>
+                </div>
+                <div class="alert_in_scadenza">
+                    <p>Certificazione Paperino in scadenza</p>
+                </div>
+                
+                <RouterLink to="/certificazione/">
                     <div class="certificazione">
-                        <p><img src="../assets/images/certificate.png"/>Certificazione 2</p>
-                        <button>Carica documento</button>
+                        <p><img src="../assets/images/certificate.png"/>Certificazione Pippo</p>
+                        <button>Modifica</button>
+                    </div>
+                </RouterLink>
+                <RouterLink to="/certificazione/">
+                    <div class="certificazione">
+                        <p><img src="../assets/images/certificate.png"/>Certificazione Paperino</p>
+                        <button>Modifica</button>
                     </div>
                  </RouterLink>
-                <RouterLink to="/certificazione/13">
+                <RouterLink to="/certificazione/">
                     <div class="certificazione">
-                        <p><img src="../assets/images/certificate.png"/>Certificazione 3</p>
-                        <button>Carica documento</button>
+                        <p><img src="../assets/images/certificate.png"/>Certificazione Pluto</p>
+                        <button>Modifica</button>
                     </div>
                  </RouterLink>
-                <RouterLink to="/certificazione/14">
+                <RouterLink to="/certificazione/">
                     <div class="certificazione">
-                        <p><img src="../assets/images/certificate.png"/>Certificazione 4</p>
-                        <button>Carica documento</button>
+                        <p><img src="../assets/images/certificate.png"/>Certificazione Paperone</p>
+                        <button>Modifica</button>
                     </div>
                 </RouterLink>
             </div>
@@ -212,8 +218,9 @@
     border: 1px solid #dc9e08;
     }
 
+#dashboard a .upload,
 #dashboard a .certificazione {
-    background-color: #000;
+    border: 2px solid #000;
     padding: 10px 20px;
     border-radius: 15px;
     margin: 10px 0;
@@ -225,6 +232,9 @@
   transition:all 0.2s linear;
 }
 
+#dashboard a .upload { background-color: #000; }
+
+#dashboard a .upload p img,
 #dashboard a .certificazione p img {
     width: 20px;
     vertical-align: middle;
@@ -232,8 +242,12 @@
     margin-top: -5px;
 }
 
+#dashboard a .upload p img { width: 18px; }
+
+#dashboard a .upload:hover,
 #dashboard a .certificazione:hover {
     background-color: #d95d00;
+    border: 2px solid #d95d00;
     padding: 10px 20px;
     border-radius: 15px;
     margin: 10px 0;
@@ -248,6 +262,7 @@
   transition:all 0.2s linear;
 }
 
+#dashboard a .upload:hover button,
 #dashboard a .certificazione:hover button {
     color: #d95d00;
     font-weight: 700;

@@ -25,7 +25,7 @@ const submit = () => {
       </div>
       <div class="form-group">
         <label>Password</label>
-        <input v-model="formData.password" type="text" required>
+        <input v-model="formData.password" type="password" required>
       </div>
 
       <div class="button-container">

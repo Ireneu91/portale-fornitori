@@ -23,7 +23,7 @@ const router = createRouter({
       component: QuestionarioView,
     },
     {
-      path: '/certificazione/:id',
+      path: '/certificazione/',
       name: 'certificazione',
       component: CertificazioneView,
     },

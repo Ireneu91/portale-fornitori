@@ -1,19 +1,40 @@
-i<script setup>
-import { useRoute } from 'vue-router'
-import certificazioni from '@/constant/certificazioni'
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
-const route = useRoute()
+const router = useRouter()
 
-const certificazione = certificazioni.find(q => q.id === Number(route.params.id) )
+const formData = ref({
+  tipologia: ''
+})
+
+const submit = () => {
+  router.push('/dashboard')
+}
 </script>
 
 <template>
   <section id="certificazioni">
-    <h1><img src="../assets/images/certificate.png"/>Certificazione 1</h1>
-    <p>Carica la tua certificazione.</p>
+    <h1><img src="../assets/images/certificate.png"/>Carica o aggiorna la tua certificazione</h1>
     <form action="/upload" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Tipologia certificazione</label>
+        <input v-model="formData.tipologia" type="text" required>
+      </div>
+      <div class="form-group">
+          <label for="documento">Carica Allegato:</label>
+          <input type="file" id="documento" name="documento" accept=".pdf, .jpg, .jpeg, .png">
+      </div>
+      <div class="form-group">
+          <label for="scadenza">Data di Scadenza:</label>
+          <input type="date" id="scadenza" name="scadenza" required>
+      </div>
+      <div class="button-container">
+          <button>Carica documento</button>
+      </div>
+    </form>
+    <!-- <form action="/upload" method="POST" enctype="multipart/form-data">
       <div class="campi" v-for="campo of certificazione.campi" :key="campo.title">
-            <p class="campo">{{campo.title}}</p>
             <div v-if="campo.type == 'allegato'" class="allegato">
                 <div class="form-group">
                     <label for="documento">Carica Allegato:</label>
@@ -30,7 +51,7 @@ const certificazione = certificazioni.find(q => q.id === Number(route.params.id)
         <div class="button-container">
             <button>Carica documento</button>
         </div>
-    </form>
+    </form> -->
 </section>
 </template>
 
@@ -43,10 +64,12 @@ const certificazione = certificazioni.find(q => q.id === Number(route.params.id)
   border-radius: 40px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
 }
+
+#certificazioni h1 { margin-bottom: 10px; }
 
 #certificazioni h1 img {
     width: 20px;
