@@ -6,7 +6,7 @@
 #app {
   width: 100%;
   font-weight: normal;
-  background-image: url('@/assets/sfondo.webp');
+  background-image: url('@/assets/images/sfondo.webp');
   background-size: cover;
   background-repeat: none;
   overflow: hidden;

@@ -4,23 +4,22 @@ import questionari from '@/constant/questionari'
 
 const route = useRoute()
 
-const questionario = questionari.find(q => q.id === Number(route.params.id) )
-console.log(questionario);
+const questionario = questionari.find(q => q.id === Number(route.params.id))
 </script>
 
 <template>
   <form id="questionario">
-        <h1>{{questionario.title}}</h1>
-        <div class="quesiti" v-for="domanda of questionario.domande" :key="domanda.title">
+        <h1>{{questionario?.title}}</h1>
+        <div class="quesiti" v-for="domanda of questionario?.domande" :key="domanda.title">
             <p class="domanda">{{domanda.title}}</p>
             <div v-if="domanda.type == 'radio-affermazione'" class="affermazione">
-                <input type="radio" id="sì" name="genere" value="sì">
+                <input type="radio" id="sì" name="sì" value="sì">
                 <label for="sì">Sì</label><br>
                 
-                <input type="radio" id="no" name="genere" value="no">
+                <input type="radio" id="no" name="no" value="no">
                 <label for="no">No</label><br>
                 
-                <input type="radio" id="non-applicabile" name="genere" value="non-applicabile">
+                <input type="radio" id="non-applicabile" name="non-applicabile" value="non-applicabile">
                 <label for="non-applicabile">Non applicabile</label>
             </div>
             <div v-if="domanda.type == 'radio-numeri'" class="numeri">

@@ -43,25 +43,25 @@
                 
                 <RouterLink to="/certificazione/11">
                     <div class="certificazione">
-                        <p><img src="../assets/certificate.png"/>Certificazione 1</p>
+                        <p><img src="../assets/images/certificate.png"/>Certificazione 1</p>
                         <button>Carica documento</button>
                     </div>
                 </RouterLink>
                 <RouterLink to="/certificazione/12">
                     <div class="certificazione">
-                        <p><img src="../assets/certificate.png"/>Certificazione 2</p>
+                        <p><img src="../assets/images/certificate.png"/>Certificazione 2</p>
                         <button>Carica documento</button>
                     </div>
                  </RouterLink>
                 <RouterLink to="/certificazione/13">
                     <div class="certificazione">
-                        <p><img src="../assets/certificate.png"/>Certificazione 3</p>
+                        <p><img src="../assets/images/certificate.png"/>Certificazione 3</p>
                         <button>Carica documento</button>
                     </div>
                  </RouterLink>
                 <RouterLink to="/certificazione/14">
                     <div class="certificazione">
-                        <p><img src="../assets/certificate.png"/>Certificazione 4</p>
+                        <p><img src="../assets/images/certificate.png"/>Certificazione 4</p>
                         <button>Carica documento</button>
                     </div>
                 </RouterLink>
@@ -75,7 +75,7 @@
 #dashboard {
     width: 100%;
     margin: 0;
-    padding: 0;    
+    padding: 80px 0;    
 }
 
 #dashboard h1 {
@@ -121,7 +121,7 @@
     padding: 10px 20px;
     border-radius: 15px;
     margin: 10px 0;
-    background-image: url("../assets/freccia.svg");
+    background-image: url("../assets/images/freccia.svg");
     background-repeat: no-repeat;
     background-size: 5px;
     background-position: 0px 50%;

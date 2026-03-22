@@ -5,12 +5,11 @@ import certificazioni from '@/constant/certificazioni'
 const route = useRoute()
 
 const certificazione = certificazioni.find(q => q.id === Number(route.params.id) )
-console.log(certificazione);
 </script>
 
 <template>
   <section id="certificazioni">
-    <h1><img src="../assets/certificate.png"/>Certificazione 1</h1>
+    <h1><img src="../assets/images/certificate.png"/>Certificazione 1</h1>
     <p>Carica la tua certificazione.</p>
     <form action="/upload" method="POST" enctype="multipart/form-data">
       <div class="campi" v-for="campo of certificazione.campi" :key="campo.title">

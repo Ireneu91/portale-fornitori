@@ -1,13 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
 const formData = ref({
-  azienda: '',
-  partitaIva: '',
-  settore: ''
+  fornitore: '',
+  password: ''
 })
 
 const submit = () => {
@@ -21,8 +20,8 @@ const submit = () => {
     <p>Compila il form con i tuoi dati per accedere al portale per rispondere ai questionari e caricare le tue certificazioni.</p>
     <form @submit.prevent="submit"  method="POST">
       <div class="form-group">
-        <label>Azienda</label>
-        <input v-model="formData.azienda" type="text" required>
+        <label>Fornitore</label>
+        <input v-model="formData.fornitore" type="text" required>
       </div>
       <div class="form-group">
         <label>Password</label>
